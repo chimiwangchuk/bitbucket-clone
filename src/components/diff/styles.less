@@ -1,0 +1,464 @@
+.bitkit-diff-wrapper-diff {
+  width: 100%;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ffffff;
+}
+.bitkit-diff-wrapper-diff .line-wrapper {
+  box-sizing: border-box;
+}
+.bitkit-diff-wrapper-diff .line-wrapper:hover i,
+.bitkit-diff-wrapper-diff .line-wrapper:focus i {
+  opacity: 1;
+}
+.bitkit-diff-wrapper-diff .line-wrapper .add-comment-button:focus,
+.bitkit-diff-wrapper-diff .line-wrapper:hover .add-comment-button {
+  background: url('data:image/svg+xml,%3C%3Fxml version="1.0" encoding="UTF-8"%3F%3E%3Csvg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16pt" height="16pt" viewBox="0 0 16 16" version="1.1"%3E%3Cg id="surface1"%3E%3Cpath style=" stroke:none;fill-rule:evenodd;fill:%234c9aff;fill-opacity:1;" d="M 14.667969 8 C 14.667969 11.683594 11.683594 14.667969 8 14.667969 C 4.316406 14.667969 1.332031 11.683594 1.332031 8 C 1.332031 4.316406 4.316406 1.332031 8 1.332031 C 11.683594 1.332031 14.667969 4.316406 14.667969 8 Z M 14.667969 8 "/%3E%3Cpath style=" stroke:none;fill-rule:evenodd;fill:white;fill-opacity:1;" d="M 7.363281 5.304688 L 7.363281 7.363281 L 5.304688 7.363281 C 4.953125 7.363281 4.667969 7.648438 4.667969 8 C 4.667969 8.351562 4.953125 8.636719 5.304688 8.636719 L 7.363281 8.636719 L 7.363281 10.695312 C 7.363281 11.046875 7.648438 11.332031 8 11.332031 C 8.351562 11.332031 8.636719 11.046875 8.636719 10.695312 L 8.636719 8.636719 L 10.695312 8.636719 C 11.046875 8.636719 11.332031 8.351562 11.332031 8 C 11.332031 7.648438 11.046875 7.363281 10.695312 7.363281 L 8.636719 7.363281 L 8.636719 5.304688 C 8.636719 4.953125 8.351562 4.667969 8 4.667969 C 7.648438 4.667969 7.363281 4.953125 7.363281 5.304688 Z M 7.363281 5.304688 "/%3E%3C/g%3E%3C/svg%3E%0A');
+  background-size: 16px 16px;
+  opacity: 1;
+}
+.bitkit-diff-wrapper-diff .line-wrapper .add-comment-button:focus {
+  border: 2px solid #4c9aff;
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+  margin-left: -11px;
+  margin-top: 0px;
+  background-color: white;
+}
+.bitkit-diff-wrapper-diff .line-wrapper.type-add {
+  background: #e3fcef;
+}
+.bitkit-diff-wrapper-diff .line-wrapper.type-del {
+  background: #ffebe6;
+}
+.bitkit-diff-wrapper-diff .line-wrapper.type-normal {
+  background: #ffffff;
+}
+.bitkit-diff-wrapper-diff .line-wrapper.type-empty {
+  background: repeating-linear-gradient(53deg, transparent, transparent 2px, #ebecf0 3px, #ebecf0 3px, transparent 4px);
+}
+.bitkit-diff-wrapper-diff .line-wrapper.type-loaded {
+  background: #fafbfc;
+}
+.bitkit-diff-wrapper-diff .line-wrapper.has-conflict-content {
+  background: #fffae6;
+}
+.bitkit-diff-wrapper-diff .line-wrapper.has-conflict-marker {
+  background: #fff0b3;
+}
+.feature-color-blind-mode .bitkit-diff-wrapper-diff .line-wrapper.type-add {
+  background: #e6fcff;
+}
+.feature-color-blind-mode .bitkit-diff-wrapper-diff .line-wrapper.has-conflict-content {
+  background: #fffae6;
+}
+.feature-color-blind-mode .bitkit-diff-wrapper-diff .line-wrapper.has-conflict-marker {
+  background: #fff0b3;
+}
+.bitkit-diff-wrapper-diff .line-wrapper.active {
+  background: #ebecf0;
+}
+.bitkit-diff-wrapper-diff .code-component {
+  height: 20px;
+  line-height: 20px;
+  font-family: 'SFMono-Medium', 'SF Mono', 'Segoe UI Mono', 'Roboto Mono', 'Ubuntu Mono', Menlo, Consolas, Courier, monospace;
+  font-size: 12px;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 8px;
+  /* Hack to stop post <pre> gap on empty code lines */
+}
+.bitkit-diff-wrapper-diff .code-component::after {
+  content: '';
+  display: inline-block;
+}
+.bitkit-diff-wrapper-diff .code-component del,
+.bitkit-diff-wrapper-diff .code-component ins {
+  text-decoration: none;
+  display: inline;
+  padding: 3px 0;
+}
+.bitkit-diff-wrapper-diff .code-component del {
+  background-color: #ffbdad;
+}
+.bitkit-diff-wrapper-diff .code-component ins {
+  background-color: #abf5d1;
+}
+.feature-color-blind-mode .bitkit-diff-wrapper-diff .code-component ins {
+  background-color: #79e2f2;
+}
+.bitkit-diff-wrapper-diff .code-diff {
+  -moz-tab-size: 6;
+    -o-tab-size: 6;
+       tab-size: 6;
+  display: inline-block;
+}
+.bitkit-diff-wrapper-diff .line-type {
+  padding-right: 8px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.bitkit-diff-wrapper-diff .line-numbers {
+  height: 20px;
+  font-family: 'SFMono-Medium', 'SF Mono', 'Segoe UI Mono', 'Roboto Mono', 'Ubuntu Mono', Menlo, Consolas, Courier, monospace;
+  font-size: 12px;
+  position: absolute;
+  left: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  box-sizing: border-box;
+  border-right: 1px solid #dfe1e6;
+  padding: 0 8px;
+  line-height: 16px;
+  background-color: #fafbfc;
+  color: #5e6c84;
+}
+.bitkit-diff-wrapper-diff .line-numbers.active {
+  background: #ebecf0;
+}
+.bitkit-diff-wrapper-diff .line-number {
+  display: inline-block;
+  line-height: 20px;
+  z-index: 2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.bitkit-diff-wrapper-diff .chunks-wrapper {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  width: 0;
+}
+.bitkit-diff-wrapper-diff .chunk-wrapper:not(:last-child):not(:nth-last-of-type(2)) {
+  border-bottom: 1px solid #ebecf0;
+}
+.bitkit-diff-wrapper-diff .chunk-wrapper:last-child {
+  border-top: 1px solid #ebecf0;
+}
+.bitkit-diff-wrapper-diff .chunk-wrapper:first-child {
+  border-top: none;
+}
+.bitkit-diff-wrapper-diff .diff-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  overflow-y: hidden;
+  box-sizing: border-box;
+}
+.bitkit-diff-wrapper-diff .diff-wrapper:not(:last-child) {
+  border-right: 1px solid #dfe1e6;
+}
+.bitkit-diff-wrapper-diff .diff-wrapper + .bitkit-diff-wrapper-diff .diff-wrapper {
+  border-left: none;
+}
+.bitkit-diff-wrapper-diff .loaded-lines-wrapper:first-child {
+  border-bottom: 1px solid #dfe1e6;
+}
+.bitkit-diff-wrapper-diff .loaded-lines-wrapper:last-child {
+  border-top: 1px solid #dfe1e6;
+}
+.bitkit-diff-wrapper-diff .diff-chunk {
+  width: 100%;
+  overflow-x: auto;
+  /* FF shows vertical scroll even if overflow-x is set. */
+  overflow-y: hidden;
+}
+.bitkit-diff-wrapper-diff .diff-chunk:not(:last-child) {
+  border-bottom: 1px solid #ebecf0;
+}
+.bitkit-diff-wrapper-diff .diff-chunk-inner {
+  min-width: 100%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+.bitkit-diff-wrapper-diff.feature-word-wrap .diff-chunk-inner.side-by-side {
+  width: 100%;
+}
+.bitkit-diff-wrapper-diff .chunk-heading {
+  height: 20px;
+  white-space: nowrap;
+  box-sizing: border-box;
+  line-height: 20px;
+  min-height: 20px;
+  padding: 0 8px;
+  color: #5e6c84;
+  font-family: 'SFMono-Medium', 'SF Mono', 'Segoe UI Mono', 'Roboto Mono', 'Ubuntu Mono', Menlo, Consolas, Courier, monospace;
+  font-size: 12px;
+}
+.bitkit-diff-wrapper-diff .chunk-heading-wrapper {
+  background-color: #fafbfc;
+  box-sizing: border-box;
+  max-height: 24px;
+}
+.bitkit-diff-wrapper-diff .chunk-heading-wrapper:hover i,
+.bitkit-diff-wrapper-diff .chunk-heading-wrapper:focus i {
+  opacity: 1;
+}
+.bitkit-diff-wrapper-diff .chunk-heading-wrapper:not(:last-child) {
+  border-bottom: 1px solid #ebecf0;
+}
+.bitkit-diff-wrapper-diff .chunk-heading-wrapper:last-child {
+  border-top: 1px solid #ebecf0;
+}
+.bitkit-diff-wrapper-diff .chunk-heading-wrapper .show-more-lines-wrapper {
+  border-bottom: 1px solid #ebecf0;
+}
+.bitkit-diff-wrapper-diff .line-number-permalink {
+  display: inline-block;
+  line-height: 20px;
+  z-index: 2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #5e6c84;
+}
+.bitkit-diff-wrapper-diff .line-number-permalink:active,
+.bitkit-diff-wrapper-diff .line-number-permalink:hover,
+.bitkit-diff-wrapper-diff .line-number-permalink:visited,
+.bitkit-diff-wrapper-diff .line-number-permalink:focus {
+  color: #5e6c84;
+}
+.bitkit-diff-wrapper-diff .show-more-lines-wrapper {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+.bitkit-diff-wrapper-diff .show-more-lines-button {
+  border: 0 none;
+  border-right: 1px solid #dfe1e6;
+  background-color: #fafbfc;
+  color: #5e6c84;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  outline-offset: -3px;
+  outline-width: 2px;
+  overflow: hidden;
+  padding: 0;
+  /* Ensure good sizing & alignment of the show more lines icon. */
+}
+.bitkit-diff-wrapper-diff .show-more-lines-button > span {
+  max-height: 20px;
+}
+.bitkit-diff-wrapper-diff .side-by-side-lines-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  /* stylelint-disable-next-line */
+}
+.bitkit-diff-wrapper-diff .side-by-side-lines-wrapper .chunk-heading-wrapper {
+  width: 50%;
+  position: relative;
+  border-bottom: 1px solid #ebecf0;
+  max-height: none;
+}
+.bitkit-diff-wrapper-diff .side-by-side-lines-wrapper .chunk-heading-wrapper:last-child {
+  border-top: none;
+}
+.bitkit-diff-wrapper-diff .side-by-side-lines-wrapper .chunk-heading-wrapper:first-child {
+  border-right: 1px solid #dfe1e6;
+}
+.bitkit-diff-wrapper-diff .side-by-side-lines-wrapper .line-wrapper {
+  width: 50%;
+  display: inline-block;
+  position: relative;
+}
+.bitkit-diff-wrapper-diff .side-by-side-lines-wrapper .line-wrapper:first-child {
+  border-right: 1px solid #dfe1e6;
+}
+.bitkit-diff-wrapper-diff .side-by-side-lines-wrapper .line-numbers {
+  height: 100%;
+}
+.bitkit-diff-wrapper-diff .side-by-side-lines-wrapper .show-more-lines-wrapper {
+  height: 100%;
+}
+.bitkit-diff-wrapper-diff .side-by-side-lines-wrapper .code-component {
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+}
+.bitkit-diff-wrapper-diff .side-by-side-lines-wrapper .show-more-lines-button {
+  height: 100%;
+}
+.bitkit-diff-wrapper-diff .side-by-side-lines-wrapper .code-diff {
+  display: inline;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.bitkit-diff-wrapper-diff .side-by-side-lines-wrapper .chunk-heading {
+  white-space: pre-wrap;
+  word-break: break-word;
+  height: auto;
+}
+.bitkit-diff-wrapper-diff .add-comment-button {
+  background: none;
+  display: inline-block;
+  outline: none;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  z-index: 2;
+  margin-left: -9px;
+  margin-top: 2px;
+  opacity: 0;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.bitkit-diff-wrapper-diff .side-by-side-chunk {
+  display: -ms-flexbox;
+  display: flex;
+}
+.bitkit-diff-wrapper-diff .side-by-side-chunk > div {
+  width: 50%;
+}
+.bitkit-diff-wrapper-diff .inline-content-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  /* 
+    IE 11 does not support calc, so a fallback to 100% just adds a little extra 
+    padding to the right of the inlineContent when the window is too small 
+  */
+  max-width: 100%;
+}
+.bitkit-diff-wrapper-diff .inline-content-wrapper > .line-numbers {
+  height: inherit;
+  position: static;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1;
+}
+.bitkit-diff-wrapper-diff .inline-content-wrapper + .inline-content-wrapper .bitkit-diff-inline-annotation-container {
+  margin: 0 8px 8px;
+}
+.bitkit-diff-wrapper-diff .inline-content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: 1;
+      flex: 1;
+  box-sizing: border-box;
+  position: -webkit-sticky;
+  position: sticky;
+  max-width: 960px;
+}
+.bitkit-diff-wrapper-diff .inline-content.type-add {
+  background: #e3fcef;
+}
+.bitkit-diff-wrapper-diff .inline-content.type-del {
+  background: #ffebe6;
+}
+.bitkit-diff-wrapper-diff .inline-content.type-normal {
+  background: #ffffff;
+}
+.bitkit-diff-wrapper-diff .inline-content.type-empty {
+  background: repeating-linear-gradient(53deg, transparent, transparent 2px, #ebecf0 3px, #ebecf0 3px, transparent 4px);
+}
+.bitkit-diff-wrapper-diff .inline-content.type-loaded {
+  background: #fafbfc;
+}
+.bitkit-diff-wrapper-diff .inline-content.has-conflict-content {
+  background: #fffae6;
+}
+.bitkit-diff-wrapper-diff .inline-content.has-conflict-marker {
+  background: #fff0b3;
+}
+.feature-color-blind-mode .bitkit-diff-wrapper-diff .inline-content.type-add {
+  background: #e6fcff;
+}
+.feature-color-blind-mode .bitkit-diff-wrapper-diff .inline-content.has-conflict-content {
+  background: #fffae6;
+}
+.feature-color-blind-mode .bitkit-diff-wrapper-diff .inline-content.has-conflict-marker {
+  background: #fff0b3;
+}
+.bitkit-diff-wrapper-diff .inline-content.active {
+  background: #ebecf0;
+}
+.bitkit-diff-wrapper-diff .report-list {
+  margin: 0;
+  padding: 4px 0 4px 20px;
+}
+.bitkit-diff-wrapper-diff .report-dot {
+  display: inline-block;
+  border-radius: 4px;
+  width: 8px;
+  height: 8px;
+  overflow: hidden;
+}
+.bitkit-diff-wrapper-diff .report-dot-warning {
+  background: #ffab00;
+}
+.bitkit-diff-wrapper-diff .report-dot-error {
+  background: #ff5630;
+}
+.bitkit-diff-top-level-inline-content {
+  border-bottom: 1px solid #ebecf0;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px;
+  max-width: 960px;
+}
+.bitkit-diff-top-level-inline-content .line-report-outer {
+  -ms-flex: auto;
+      flex: auto;
+}
+.bitkit-diff-inline-content-container {
+  background-color: #ffffff;
+  border: 1px solid #ebecf0;
+  border-radius: 3px;
+  -ms-flex: auto;
+      flex: auto;
+  margin: 8px;
+  padding: 8px;
+}
+.bitkit-diff-inline-annotation-severity,
+.bitkit-diff-inline-annotation-result {
+  display: -ms-flexbox;
+  display: flex;
+}
+.bitkit-diff-inline-annotation-container {
+  font-size: 11px;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 16px;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.bitkit-diff-inline-annotation-icon {
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20px;
+}
+.bitkit-diff-inline-annotation-icon img {
+  max-width: 16px;
+}
+.bitkit-diff-inline-annotation-status {
+  text-transform: capitalize;
+  margin-right: 4px;
+}
+.bitkit-diff-inline-annotation-summary {
+  margin-right: 8px;
+}
+.bitkit-diff-inline-annotation-link {
+  font-weight: bold;
+}

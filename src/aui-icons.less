@@ -1,0 +1,12 @@
+/*
+ When consuming just the above files, the font-family isn't set properly. This fixes that.
+ We could consume the full dist css, but that includes a bunch of styles we don't care about.
+*/
+.aui-icon-small:before,
+.aui-icon-large:before {
+  font-family: "Atlassian Icons";
+  src: url(atlassian-icons.566464be9ecb.eot);
+  src: url(atlassian-icons.566464be9ecb.eot?#iefix) format("embedded-opentype"), url(atlassian-icons.1eccc22ebf98.woff) format("woff"), url(atlassian-icons.f2bd44336b1a.ttf) format("truetype"), url(atlassian-icons.3565e4e79611.svg#atlassian-icons) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}

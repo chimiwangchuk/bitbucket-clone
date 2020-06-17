@@ -1,0 +1,16 @@
+export enum ApdexTask {
+  Source = 'bitbucket.apps.repo2.views.source',
+  FileBrowse = 'bitbucket.apps.repo2.views.filebrowse',
+  Commits = 'bitbucket.apps.repo2.views.CommitList',
+  Changeset = 'apps.bitbucket.repo2.views.changeset',
+  Branches = 'bitbucket.apps.repo2.views.BranchList',
+  PullRequest = 'bitbucket.apps.pullrequests.views.pullrequest',
+  PullRequests = 'bitbucket.apps.pullrequests.views.list_pullrequests',
+  RepoCreateBranch = 'bitbucket.apps.repo2.views.RepoCreateBranchView',
+  RepoSettingsView = 'bitbucket.apps.repo2.views.RepoSettingsView',
+  GlobalCreateBranch = 'bitbucket.apps.repo2.views.GlobalCreateBranchView',
+  PipelineList = 'bitbucket.connect.list_pipelines',
+  DashboardOverview = 'bitbucket.apps.dashboard.views.DashboardOverviewView',
+  DashboardRepositories = 'bitbucket.apps.dashboard.views.DashboardRepositories',
+  ProfileRepositories = 'bitbucket.apps.profile.views.ProfileRepositories',
+}

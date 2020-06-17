@@ -1,0 +1,1 @@
+export const COMMIT_LIST_HEADER_HEIGHT = 28;
